@@ -11,7 +11,8 @@ const useStyles = makeStyles(() => ({
 		border       : '1px solid #ccc',
 		borderRadius : '50px',
 		width        : '80%',
-		margin       : '0.5rem'
+		margin       : '0.5rem',
+		position     : 'relative'
 	},
 
 	searchIcon : {
@@ -21,8 +22,8 @@ const useStyles = makeStyles(() => ({
 	optionList : {
 		marginTop       : '0.1rem',
 		position        : 'absolute',
-		paddingLeft     : '4%',
-		width           : '21%',
+		paddingLeft     : '12%',
+		width           : '88%',
 		borderRadius    : '15px 15px 50px 50px',
 		backgroundColor : 'white',
 		boxShadow       : '0 3px 5px 2px #a9a9a9'
