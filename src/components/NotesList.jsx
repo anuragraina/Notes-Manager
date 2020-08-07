@@ -32,7 +32,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NotesList() {
 	const classes = useStyles();
-	const { notes } = useContext(NotesContext);
+	const { notes, selectedNote, setSelectedNote } = useContext(NotesContext);
+
+	const handleClick = (note) => {
+		setSelectedNote(note);
+	};
 
 	return (
 		<div className={classes.notesList}>
@@ -40,8 +44,13 @@ export default function NotesList() {
 				<Typography variant="h5">Search</Typography>
 				<CreateNote />
 			</div>
-			{notes.map((note) => (
-				<Box key={note.time}>
+			{notes.map((note, index) => (
+				<Box
+					key={note.time}
+					onClick={() => handleClick(note)}
+					bgcolor={note.time === selectedNote.time ? 'info.main' : ''}
+					color={note.time === selectedNote.time ? 'info.contrastText' : ''}
+				>
 					<Divider />
 					<Typography className={classes.title} component="p" variant="subtitle2">
 						{note.title}

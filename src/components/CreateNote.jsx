@@ -73,7 +73,6 @@ export default function CreateNote() {
 									JSON.stringify([ { title, content, time: new Date().getTime() }, ...notes ])
 								);
 								handleClose();
-								//fetchLabels();
 							}}
 						>
 							<Typography variant="h5">Create Note</Typography>
@@ -92,7 +91,7 @@ export default function CreateNote() {
 								value={content}
 								variant="outlined"
 								multiline
-								rows={4}
+								rows={10}
 								className={classes.text}
 								onChange={(e) => setContent(e.target.value)}
 								required
