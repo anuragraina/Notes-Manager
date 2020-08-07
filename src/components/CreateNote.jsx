@@ -50,6 +50,7 @@ export default function CreateNote() {
 
 	return (
 		<div>
+			{/* Modal is opened on clicking the + icon to add new note */}
 			<AddIcon color="primary" fontSize="large" onClick={handleOpen} />
 			<Modal
 				aria-labelledby="transition-modal-title"

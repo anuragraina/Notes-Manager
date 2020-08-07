@@ -28,7 +28,9 @@ export default function DisplayNote() {
 			if (note.time === selectedNote.time) {
 				arr[index] = selectedNote;
 				localStorage.setItem('notes', JSON.stringify(arr));
-				window.location.reload();
+
+				//page refreshed if title is changed to update the notes list on left
+				note.title !== selectedNote.title ? window.location.reload() : setChanged(false);
 			}
 		});
 	};

@@ -35,9 +35,11 @@ export default function App() {
 			<NotesContext.Provider value={{ notes, setNotes, selectedNote, setSelectedNote }}>
 				<Container>
 					<Grid container>
+						{/* left side */}
 						<Grid item sm={4} className={classes.grid}>
 							<NotesList />
 						</Grid>
+						{/* right side */}
 						<Grid item sm={8} className={classes.grid}>
 							<DisplayNote />
 						</Grid>

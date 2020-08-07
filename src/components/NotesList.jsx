@@ -4,9 +4,10 @@ import { Box, Divider, Typography } from '@material-ui/core';
 import moment from 'moment';
 
 import CreateNote from './CreateNote';
+import AutocompleteBar from './AutocompleteBar';
 import { NotesContext } from './App';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
 	notesList  : {
 		display       : 'flex',
 		flexDirection : 'column'
@@ -41,9 +42,11 @@ export default function NotesList() {
 	return (
 		<div className={classes.notesList}>
 			<div className={classes.listHeader}>
-				<Typography variant="h5">Search</Typography>
+				<AutocompleteBar />
 				<CreateNote />
 			</div>
+
+			{/* Displaying all the notes */}
 			{notes.map((note, index) => (
 				<Box
 					key={note.time}
