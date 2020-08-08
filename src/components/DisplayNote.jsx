@@ -49,7 +49,7 @@ export default function DisplayNote() {
 	};
 
 	return notes.length === 0 ? (
-		<Typography variant="h3">Notes not found!!!</Typography>
+		<Typography variant="h5">Notes not found!!!</Typography>
 	) : (
 		<div>
 			<Input

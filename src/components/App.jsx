@@ -10,7 +10,8 @@ export const NotesContext = createContext(null);
 const useStyles = makeStyles(() => ({
 	grid : {
 		border    : '1px solid',
-		marginTop : '2rem'
+		marginTop : '2rem',
+		minHeight : '500px'
 	}
 }));
 
