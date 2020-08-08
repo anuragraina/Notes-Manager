@@ -24,13 +24,14 @@ const useStyles = makeStyles(() => ({
 		position        : 'absolute',
 		paddingLeft     : '12%',
 		width           : '88%',
-		borderRadius    : '15px 15px 50px 50px',
+		borderRadius    : '15px 15px 20px 20px',
 		backgroundColor : 'white',
 		boxShadow       : '0 3px 5px 2px #a9a9a9'
 	},
 	options    : {
 		fontFamily : 'Segoe UI',
-		cursor     : 'default'
+		cursor     : 'default',
+		padding    : '0.3rem'
 	}
 }));
 
