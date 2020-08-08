@@ -6,12 +6,12 @@ import { NotesContext } from './App';
 
 const useStyles = makeStyles(() => ({
 	title   : {
-		fontSize     : '2rem',
-		paddingLeft  : '0.5rem',
-		paddingRight : '0.5rem'
+		fontSize : '2rem',
+		padding  : '0.5rem 1rem'
 	},
 	content : {
-		padding : '0.5rem'
+		padding      : '1rem',
+		paddingRight : '2rem'
 	},
 	button  : {
 		margin : '0.5rem'
@@ -49,7 +49,9 @@ export default function DisplayNote() {
 	};
 
 	return notes.length === 0 ? (
-		<Typography variant="h5">Notes not found!!!</Typography>
+		<Typography variant="h5" className={classes.content}>
+			Notes not found!!!
+		</Typography>
 	) : (
 		<div>
 			<Input

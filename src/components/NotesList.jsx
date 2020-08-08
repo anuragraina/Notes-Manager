@@ -45,6 +45,7 @@ export default function NotesList() {
 				<AutocompleteBar />
 				<CreateNote />
 			</div>
+			<Divider />
 
 			{/* Displaying all the notes */}
 			{notes.map((note, index) => (
@@ -54,13 +55,13 @@ export default function NotesList() {
 					bgcolor={note.time === selectedNote.time ? 'info.main' : ''}
 					color={note.time === selectedNote.time ? 'info.contrastText' : ''}
 				>
-					<Divider />
 					<Typography className={classes.title} component="p" variant="subtitle2">
 						{note.title}
 					</Typography>
 					<Typography className={classes.time} component="p" variant="caption" align="right" gutterBottom>
 						Created {moment(note.time).fromNow()}
 					</Typography>
+					<Divider />
 				</Box>
 			))}
 		</div>
